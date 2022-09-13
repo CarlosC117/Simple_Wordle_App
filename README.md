@@ -5,7 +5,7 @@ Submitted by: Carlos Chavez
  Simple Wordle App* is an android app that recreates a simple version of the popular word game [Wordle](https://www.nytimes.com/games/wordle/index.html). 
  In a more simplified manner. 
 
-Time spent: undefined hours spent in total
+Time spent: 9
 
 ## Required Features
 
