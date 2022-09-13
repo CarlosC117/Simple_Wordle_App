@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Simple_Wordle_App</string>
+    <string name="guess_one">Guess One</string>
+    <string name="guess_one_check">Guess One - Check</string>
+    <string name="guess_two">Guess Two</string>
+    <string name="guess_two_check">Guess Two - Check</string>
+    <string name="guess_three">Guess Three</string>
+    <string name="guess_three_check">Guess Three - Check</string>
+    <string name="guess">Guess</string>
+    <string name="_4_letter_word">4 letter word</string>
+    <string name="reset">RESET</string>
 </resources>
