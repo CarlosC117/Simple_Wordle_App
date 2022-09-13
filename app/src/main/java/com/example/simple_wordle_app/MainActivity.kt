@@ -81,6 +81,7 @@ class MainActivity : AppCompatActivity() {
                         if (first.text == "OOOO") {
                             click = 3
                             numberOfWins++
+                            added = "Winning Streak: $numberOfWins"
                             win.text = added
                         }
                     }
