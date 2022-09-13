@@ -9,4 +9,5 @@
     <string name="guess">Guess</string>
     <string name="_4_letter_word">4 letter word</string>
     <string name="reset">RESET</string>
+    <string name="winning_streak">Winning Streak:</string>
 </resources>

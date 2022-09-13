@@ -1,5 +1,6 @@
 package com.example.simple_wordle_app
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -39,9 +40,11 @@ class MainActivity : AppCompatActivity() {
     lateinit var first: TextView
     lateinit var second: TextView
     lateinit var third: TextView
+    lateinit var win: TextView
 
     var wordToGuess = FourLetterWordList.getRandomFourLetterWord()
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -59,10 +62,12 @@ class MainActivity : AppCompatActivity() {
         guessButton = findViewById(R.id.guessButton)
         resetButton = findViewById(R.id.reset)
         hidden = findViewById(R.id.hiddenWord)
+        win = findViewById(R.id.wins)
 
         hidden.visibility = View.GONE
         resetButton.visibility = View.GONE
         hidden.text = wordToGuess
+        win.text = "Winning Streak: $numberOfWins"
 
         guessButton.setOnClickListener {
             val word = guessText.text
@@ -74,14 +79,29 @@ class MainActivity : AppCompatActivity() {
                     1 -> {
                         one.text = word.toString()
                         first.text = checkGuess(word.toString().uppercase())//checkGuess(word)
+                        if (first.text == "OOOO") {
+                            click = 3
+                            numberOfWins++
+                            win.text = "Winning Streak: $numberOfWins"
+                        }
                     }
                     2 -> {
                         two.text = word.toString()
                         second.text = checkGuess(word.toString().uppercase())//checkGuess(word)
+                        if (second.text == "OOOO") {
+                            click = 3
+                            numberOfWins++
+                            win.text = "Winning Streak: $numberOfWins"
+                        }
                     }
                     3 -> {
                         three.text = word.toString()
                         third.text = checkGuess(word.toString().uppercase())//checkGuess(word)
+                        if (third.text == "OOOO") {
+                            click = 3
+                            numberOfWins++
+                            win.text = "Winning Streak: $numberOfWins"
+                        }
                     }
                 }
             }
